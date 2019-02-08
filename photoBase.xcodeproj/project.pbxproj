@@ -19,6 +19,7 @@
 		AD36BC38220E157E004364EF /* Entity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD36BC36220E157E004364EF /* Entity+CoreDataClass.swift */; };
 		AD36BC39220E157E004364EF /* Entity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD36BC37220E157E004364EF /* Entity+CoreDataProperties.swift */; };
 		AD36BC3C220E15F6004364EF /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD36BC3B220E15F6004364EF /* CoreData.framework */; };
+		AD36BC3E220E2DF6004364EF /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD36BC3D220E2DF6004364EF /* AddViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		AD36BC36220E157E004364EF /* Entity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Entity+CoreDataClass.swift"; sourceTree = "<group>"; };
 		AD36BC37220E157E004364EF /* Entity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Entity+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		AD36BC3B220E15F6004364EF /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		AD36BC3D220E2DF6004364EF /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +116,7 @@
 				AD36BC01220E0B7D004364EF /* AppDelegate.swift */,
 				AD36BC32220E0EFF004364EF /* TableViewController.swift */,
 				AD36BC34220E0F3B004364EF /* TableViewCell.swift */,
+				AD36BC3D220E2DF6004364EF /* AddViewController.swift */,
 				AD36BC05220E0B7D004364EF /* Main.storyboard */,
 				AD36BC0B220E0B7D004364EF /* Assets.xcassets */,
 				AD36BC0D220E0B7D004364EF /* LaunchScreen.storyboard */,
@@ -282,6 +285,7 @@
 			files = (
 				AD36BC39220E157E004364EF /* Entity+CoreDataProperties.swift in Sources */,
 				AD36BC0A220E0B7D004364EF /* photoBase.xcdatamodeld in Sources */,
+				AD36BC3E220E2DF6004364EF /* AddViewController.swift in Sources */,
 				AD36BC35220E0F3B004364EF /* TableViewCell.swift in Sources */,
 				AD36BC33220E0EFF004364EF /* TableViewController.swift in Sources */,
 				AD36BC38220E157E004364EF /* Entity+CoreDataClass.swift in Sources */,
@@ -467,7 +471,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = kaiserdem.photoBase;
+				PRODUCT_BUNDLE_IDENTIFIER = kaiserdem.RampUp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -485,7 +489,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = kaiserdem.photoBase;
+				PRODUCT_BUNDLE_IDENTIFIER = kaiserdem.RampUp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";

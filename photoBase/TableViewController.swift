@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 
-class TableViewController: UITableViewController, NSFetchedResultsController {
+class TableViewController: UITableViewController, NSFetchedResultsControllerDelegate {
 
   var frc: NSFetchedResultsController = NSFetchedResultsController<NSFetchRequestResult>()
   
@@ -17,43 +17,58 @@ class TableViewController: UITableViewController, NSFetchedResultsController {
   
   func fetchRequest() -> NSFetchRequest<NSFetchRequestResult> { // получить запрос
     
+    let fetchResult = NSFetchRequest<NSFetchRequestResult>(entityName: "Entity")
+    let sorted = NSSortDescriptor(key: "titleText", ascending: true)
+    fetchResult.sortDescriptors = [sorted]
+    return fetchResult
   }
   
   func getFRC() -> NSFetchedResultsController<NSFetchRequestResult> {
-    
+    frc = NSFetchedResultsController(fetchRequest: fetchRequest(), managedObjectContext: pc, sectionNameKeyPath: nil, cacheName: nil)
+    return frc
   }
   
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+       frc = getFRC()
+      frc.delegate = self
+      
+      do {
+        try frc.performFetch()
+      }
+      catch {
+        print(error)
+        return
+      }
+      self.tableView.reloadData()
     }
 
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+      
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+      
+      let numberOfRows = frc.sections?[section].numberOfObjects
+      return numberOfRows!
     }
 
-    /*
+  
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath) as! TableViewCell
 
-        // Configure the cell...
-
+      let item = frc.object(at: indexPath) as! Entity
+      cell.cellTitle.text = item.titleText
+      cell.cellDescription.text = item.descriptionText
+      cell.cellImage.image = UIImage(data: (item.image)! as Data)
+      
         return cell
     }
-    */
+  
 
     /*
     // Override to support conditional editing of the table view.

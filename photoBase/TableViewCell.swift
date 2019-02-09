@@ -21,7 +21,14 @@ class TableViewCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
-        // Configure the view for the selected state
     }
-
+//  func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat
+//  {
+//    return 100
+//  }
+//
+//  func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat
+//  {
+//    return UITableView.automaticDimension
+//  }
 }

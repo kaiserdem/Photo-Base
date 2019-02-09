@@ -59,7 +59,7 @@ class TableViewController: UITableViewController, NSFetchedResultsControllerDele
 
   
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath) as! TableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! TableViewCell
 
       let item = frc.object(at: indexPath) as! Entity
       cell.cellTitle.text = item.titleText
@@ -68,7 +68,10 @@ class TableViewController: UITableViewController, NSFetchedResultsControllerDele
       
         return cell
     }
-  
+  func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
+    
+    tableView.reloadData()
+  }
 
     /*
     // Override to support conditional editing of the table view.

@@ -65,6 +65,7 @@
                                     <outlet property="cellDescription" destination="Wmw-ZA-p4W" id="5Tu-TN-7Ey"/>
                                     <outlet property="cellImage" destination="39i-Jb-Zm3" id="SOE-Xe-E89"/>
                                     <outlet property="cellTitle" destination="0DO-rV-4Ha" id="IQm-iT-MJG"/>
+                                    <segue destination="XgM-4f-vu4" kind="show" identifier="edit" id="weR-fd-zOs"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -4745,4 +4746,7 @@ WQAAAAAAAAAAAAAAAAAEHIk
         </image>
         <image name="photo-camera" width="256" height="256"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="weR-fd-zOs"/>
+    </inferredMetricsTieBreakers>
 </document>

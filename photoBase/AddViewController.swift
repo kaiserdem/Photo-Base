@@ -15,13 +15,24 @@ class AddViewController: UIViewController, UIImagePickerControllerDelegate, UINa
   @IBOutlet weak var descriptionField: UITextField!
   @IBOutlet weak var imageView: UIImageView!
   
-var pc = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+  var item : Entity? = nil
+  
+  var pc = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
   
   override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    
+    if item == nil {
+      self.navigationItem.title = "Add new Data"
+    } else {
+      self.navigationItem.title = item?.titleText
+      titleField.text = item?.titleText
+      descriptionField.text = item?.descriptionText
+      
+      imageView.image = UIImage(data: (item?.image)! as Data)
     }
+
+  }
     
   @IBAction func dismissKeyboard(_ sender: Any) {
     self.resignFirstResponder()
@@ -52,6 +63,8 @@ var pc = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.vie
   
   @IBAction func save(_ sender: Any) {
     
+    if item == nil { // если не сущестует - создаем
+    
     let entityDescription = NSEntityDescription.entity(forEntityName: "Entity", in: pc)
     
     let item = Entity(entity: entityDescription!, insertInto: pc)
@@ -59,6 +72,13 @@ var pc = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.vie
     item.titleText = titleField.text
     item.descriptionText = descriptionField.text
     item.image = imageView.image!.pngData() as NSData?
+      
+    } else { // перезаписываем
+    
+      item?.titleText = titleField.text
+      item?.descriptionText = descriptionField.text
+      item?.image = imageView.image!.pngData() as NSData?
+    }
     do {
       try pc.save()
     }

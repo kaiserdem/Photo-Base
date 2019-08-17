@@ -3,10 +3,13 @@
 ### If you are a tourist or have come to Kiev for the first time,  the "Landmarks" app will show you the most interesting places  and find a route to get to them in the best way for you.
 
 <img src="/screens/screen1.png" width="33%"> <img src="/screens/screens2.png" width="33%"> <img src="/screens/screens3.png" width="33%">     
-<div align = "center">
-<img src="/screens/screen0.png" width="53%">
-<div align = "left">
 
+<p align="center">
+<img src="https://img.shields.io/badge/Swift-4.2-orange.svg" alt="Swift 4.2"/>
+<img src="https://img.shields.io/badge/Xcode-10%2B-brightgreen.svg" alt="XCode 10+"/>
+<img src="https://img.shields.io/badge/platform-iOS-green.svg" alt="iOS"/>
+<img src="https://img.shields.io/badge/iOS-12%2B-brightgreen.svg" alt="iOS 12"/>
+<img src="https://img.shields.io/badge/licence-MIT-lightgray.svg" alt="Licence MIT"/>
 ## Description
 
 * Upload your favorite photos from the gallery or take a fresh picture on your phone’s camera.
@@ -22,4 +25,5 @@ Using core data and uikit
 ## License
 
 This project is licensed under the MIT License.
+
 

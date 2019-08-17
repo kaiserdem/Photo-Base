@@ -10,6 +10,7 @@
 <img src="https://img.shields.io/badge/platform-iOS-green.svg" alt="iOS"/>
 <img src="https://img.shields.io/badge/iOS-12%2B-brightgreen.svg" alt="iOS 12"/>
 <img src="https://img.shields.io/badge/licence-MIT-lightgray.svg" alt="Licence MIT"/>
+
 ## Description
 
 * Upload your favorite photos from the gallery or take a fresh picture on your phone’s camera.

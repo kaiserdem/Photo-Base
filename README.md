@@ -1,6 +1,6 @@
 # Photo Base
 
-### If you are a tourist or have come to Kiev for the first time,  the "Landmarks" app will show you the most interesting places  and find a route to get to them in the best way for you.
+### Add your photos or take pictures, add a name and description. In the application, they will be safely saved even after deleting phone photos from the library.
 
 <img src="/screens/screen1.png" width="33%"> <img src="/screens/screens2.png" width="33%"> <img src="/screens/screens3.png" width="33%">     
 
